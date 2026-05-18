@@ -1,0 +1,48 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.*
+
+# Next.js
+.next/
+out/
+build/
+*.tsbuildinfo
+next-env.d.ts
+
+# Environment / secrets
+.env
+.env*.local
+.env.production
+.env.development
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+.pnpm-debug.log*
+
+# Testing
+coverage/
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Storage local F1 (se mueve a cloud en F2)
+public/uploads/*
+!public/uploads/.gitkeep
+
+# IDEs / OS
+.vscode/
+.idea/
+.DS_Store
+*.pem
+
+# Vercel
+.vercel
+
+# Prisma local
+prisma/migrations/dev.db*
+
+# Claude / agents (no compartir contexto de IA en repo público)
+.agents/
+.claude/
