@@ -132,7 +132,7 @@ export function CategoryFormDialog({
               )}
             />
             <p className="text-xs text-muted-foreground">
-              Deja en "raíz" para crear una categoría de primer nivel.
+              Deja en &ldquo;raíz&rdquo; para crear una categoría de primer nivel.
             </p>
           </div>
 

@@ -11,7 +11,7 @@ export default async function SucursalesPage() {
           <h1 className="text-3xl font-bold tracking-tight">Sucursales</h1>
           <p className="text-muted-foreground">
             Gestiona los locales del negocio. Al crear una sucursal se crea
-            automáticamente su "Caja 1".
+            automáticamente su &ldquo;Caja 1&rdquo;.
           </p>
         </div>
       </div>
