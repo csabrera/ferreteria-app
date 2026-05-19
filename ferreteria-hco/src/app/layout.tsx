@@ -8,6 +8,19 @@ import { SettingsProvider } from "@/components/providers/settings-provider";
 import { ToastProvider } from "@/components/providers/toast-provider";
 import { getSettings } from "@/server/queries/settings.queries";
 
+/**
+ * Marcar TODAS las rutas como dinámicas (renderizadas on-demand).
+ *
+ * Sin esto, Next.js intenta prerenderar páginas en build time → cada page
+ * llama Prisma → la BD no es accesible durante el build de Railway (red
+ * privada) → falla con "Can't reach database server".
+ *
+ * Además, en un admin app multi-usuario las páginas SIEMPRE necesitan data
+ * fresca (productos, ventas, auditoría, etc.). Prerenderar estáticamente
+ * sería incorrecto: cada usuario vería un snapshot stale.
+ */
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await getSettings();
   return {

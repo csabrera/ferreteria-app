@@ -3,6 +3,9 @@ import { SidebarAdmin } from "@/components/layout/sidebar-admin";
 import { Topbar } from "@/components/layout/topbar";
 import { StoreSelector } from "@/components/layout/store-selector";
 
+// Forzar render dinámico en TODAS las rutas admin (necesitan BD en runtime)
+export const dynamic = "force-dynamic";
+
 export default async function AdminLayout({
   children,
 }: {

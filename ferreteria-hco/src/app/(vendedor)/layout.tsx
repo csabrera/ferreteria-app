@@ -3,6 +3,9 @@ import { SidebarPos } from "@/components/layout/sidebar-pos";
 import { Topbar } from "@/components/layout/topbar";
 import { StoreSelector } from "@/components/layout/store-selector";
 
+// Forzar render dinámico en TODAS las rutas vendedor (POS necesita data live)
+export const dynamic = "force-dynamic";
+
 export default async function VendedorLayout({
   children,
 }: {

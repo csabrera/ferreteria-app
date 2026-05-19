@@ -1,3 +1,6 @@
+// El login lee AppSettings (logo, businessName) → necesita BD en runtime
+export const dynamic = "force-dynamic";
+
 export default function AuthLayout({
   children,
 }: {
